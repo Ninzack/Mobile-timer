@@ -3,11 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage">
 
-    <!--alleen aan passen tussen dit-->
-    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-        <Button Text="Start Timer" Clicked="ButtonClickHandler"/>
-        <Label x:Name="resultLabel" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+    <StackLayout>
+        <Label Text="Countdown Timer" HorizontalOptions="CenterAndExpand" FontSize="Large" Margin="0,20,0,0"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0">
+            <Label Text="Date:" VerticalOptions="Center" Margin="0,0,10,0"/>
+            <DatePicker x:Name="datePicker" Date="{Binding EndDate}" Format="D"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+            <Label Text="Time:" VerticalOptions="Center" Margin="0,0,10,0"/>
+            <TimePicker x:Name="timePicker" Time="{Binding EndTime}"/>
+        </StackLayout>
+
+        <Button Text="Calculate" Clicked="OnCalculateClicked" HorizontalOptions="CenterAndExpand" Margin="0,20,0,0"/>
+        <Button Text="Stop" Clicked="OnStopClicked" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0"/>
+
+        <StackLayout Margin="0,20,0,0">
+            <Label Text="Countdown:" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <Label Text="{Binding CountdownDays}" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding CountdownHours}" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding CountdownMinutes}" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="{Binding CountdownSeconds}" HorizontalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        <Button Text="Toggle Theme"
+                Command="{Binding ToggleThemeCommand}"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand" />
+        
     </StackLayout>
-    <!--en dit-->
+    
+
 
 </ContentPage>
