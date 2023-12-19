@@ -7,9 +7,11 @@
     Shell.FlyoutBehavior="Disabled"
     Title="Timer_App">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
 
+    </TabBar>
 </Shell>

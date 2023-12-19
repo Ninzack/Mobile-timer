@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    text-align: center;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #000000; /* Set default text color */
+    padding: 25px;
+}
+
+.dark-mode {
+    color: white;
+}
+
+h1 {
+    color: inherit; /* Use the default text color */
+    font-size: 40px;
+}
+
+table {
+    margin: auto;
+}
+
+th {
+    color: #FFFFFF;
+}
+
+input {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #000000; /* Text color in light mode */
+    background-color: #ffffff; /* Background color in light mode */
+}
+
+.dark-mode input {
+    color: black; /* Text color in dark mode */
+}
+
+button {
+    min-width: 120px;
+    margin: 20px 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.heading {
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.time {
+    background-color: #090909;
+    color: #FFFFFF;
+    font-size: 3vw; /* Responsive font size based on the viewport width */
+    width: 150px;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens if needed */
+    h1 {
+        font-size: 30px;
+    }
+
+    .time {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjust styles for even smaller screens if needed */
+    h1 {
+        font-size: 20px;
+    }
+
+    .time {
+        font-size: 7vw;
+    }
+}

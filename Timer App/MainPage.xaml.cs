@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using Microsoft.Maui.ApplicationModel;
+using System.Windows.Input;
 
 namespace Timer_App
 {
@@ -15,7 +16,8 @@ namespace Timer_App
             BindingContext = this;
 
             timer = new Timer(TimerTick, null, Timeout.Infinite, 1000);
-            ToggleThemeCommand = new Command(ToggleTheme);
+            //ToggleThemeCommand = new Command(ToggleTheme);
+
         }
 
         public DateTime EndDate => datePicker.Date;
@@ -73,11 +75,38 @@ namespace Timer_App
             }
         }
 
-        private void ToggleTheme()
-        {
-            // Toggle between Dark and Light mode (This part may need adjustment based on the actual API for changing theme)
-            // You may need to use different methods or properties to toggle the theme in your specific UI framework.
-        }
+        //private void ToggleTheme()
+        //{
+        //    // Get the current theme
+        //    var currentTheme = App.Current.RequestedTheme;
+
+        //    // Toggle between light and dark mode
+        //    App.Current.UserAppTheme = (currentTheme == AppTheme.Light) ? AppTheme.Dark : AppTheme.Light;
+
+        //    // You may also need to update your UI based on the selected theme
+        //    UpdateTheme();
+        //}
+
+        //private void UpdateTheme()
+        //{
+        //    // Perform any UI updates based on the selected theme
+        //    // For example, you can switch the background color, text color, etc.
+        //    if (App.Current.UserAppTheme == AppTheme.Light)
+        //    {
+        //        // Set light theme styles
+        //        this.BackgroundColor = Color.FromHex("#FFFFFF"); // White
+        //                                                         // Add any other light theme styles as needed
+        //    }
+        //    else
+        //    {
+        //        // Set dark theme styles
+        //        this.BackgroundColor = Color.FromHex("#000000"); // Black
+        //                                                         // Add any other dark theme styles as needed
+        //    }
+        //}
+
+
+
 
         #region Bindable Properties
 

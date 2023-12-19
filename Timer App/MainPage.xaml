@@ -27,10 +27,7 @@
             <Label Text="{Binding CountdownSeconds}" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
 
-        <Button Text="Toggle Theme"
-                Command="{Binding ToggleThemeCommand}"
-                HorizontalOptions="CenterAndExpand"
-                VerticalOptions="CenterAndExpand" />
+        <!--<Button Text="Toggle Theme" Command="{Binding ToggleThemeCommand}" />-->
 
     </StackLayout>
 
